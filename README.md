@@ -1,14 +1,14 @@
-carHRD R package Manual
+ovaHRDscar R package Manual
 ========================
 
 -   [Introduction](#introduction)
     -   [Contact](#contact)
--   [Before to use it](#getting-started)
-    -   [Requirements](#minimum-requirements)
+-   [Before to use it](#before-to-use-it)
+    -   [Requirements](#requirements)
     -   [Installation](#installation)
     -   [Citation](#citation)
--   [Hands-on](#workflow-overview)
-    -   [Input file example](#input-file-examples)
+-   [Hands-on](#hands-on)
+    -   [Input file example](#input-file-example)
     -   [Usage example](#usage-example)
 -   [References](#references)
 
@@ -84,9 +84,11 @@ The input list should contain columns with the previous order. Each row represen
 
 Column  description:
 
-`A_cn`: A allele copy number value
-`B_cn`: B allele  copy number value
-`total_cn`: Sum of A and B values
+- `A_cn`: A allele copy number value
+
+- `B_cn`: B allele  copy number value
+
+- `total_cn`: Sum of A and B values
 
 **Note: For each segment, the package will re-order the A and B copy number values, considering as A the one with highest ASCN.*
 
@@ -100,7 +102,7 @@ get.ovaHRDscars("F:/Documents/scarHRD/examples/segments.txt",reference = "grch38
 
 After running it will produce the next output:
 
-    ##		 	     nLOH LSTs nTAIs ovaHRDscar
+    ##           nLOH LSTs nTAIs ovaHRDscar
     ## SamplePatient1  25  35    33        93
 
 
