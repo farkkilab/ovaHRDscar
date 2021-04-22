@@ -1,4 +1,4 @@
-ovaHRDscar R package Manual
+ovaHRDscar R package manual
 ========================
 
 -   [Introduction](#introduction)
