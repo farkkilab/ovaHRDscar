@@ -23,7 +23,7 @@ The allelic imbalances quantified by this package are:
 2. Large scale transitions (LSTs): Two consecutive allelic imbalances of at least 12Mb, with a separition between then no more than 1Mb
 3. Telomeric allelic imbalances: Allelic imbalances that extend up to the telomere but do not cross the centromer.
 
-The total number of the previous allelic imbalances are the resultant ovaHRDcar value.
+The total number of the previous allelic imbalances are the resultant ovaHRDscar value.
 
 Contact
 ------------
