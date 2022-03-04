@@ -11,7 +11,6 @@ preprocess.hrd<-function(seg){
   #Will ignore chromosomes X,Y
   seg <- seg[!seg[,2] %in% c(paste('chr',c('X','Y','x','y',23,24),sep=''),c('X','Y','x','y',23,24)),]
   seg[,1] <- as.character(seg[,1])
-
   #Make sure that copy numbers values in A, are bigger than in B, if no, then invert columns
   if(! all(seg[,8] <= seg[,7]) ){
     tmp <- seg
@@ -36,7 +35,12 @@ preparing.input <- function(seg){
   #segAUX[,10] <- rep(1,dim(seg)[1])
 
   preprocessed_seg <- preprocess.hrd(segAUX)
+  preprocessed_seg[,2] = as.numeric(preprocessed_seg[,2])
+  if (!(is.numeric(preprocessed_seg[,2]) & is.numeric(preprocessed_seg[,3]) & is.numeric(preprocessed_seg[,4]) & is.numeric(preprocessed_seg[,5]) & is.numeric(preprocessed_seg[,6]))){
+	   stop("Some of the input rows do not contain numeric values in the columns: Start_position, End_position, total_cn, A_cn, B_cn")
+  }
   preprocessed_seg <- rm.chr.normals(preprocessed_seg)
   length_breaks <- preprocessed_seg[,4] - preprocessed_seg[,3]
   preprocessed_seg <- preprocessed_seg[length_breaks > 50, ] #Removing variation less than 50bp
+  return(preprocessed_seg)
 }
