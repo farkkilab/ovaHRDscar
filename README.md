@@ -97,7 +97,8 @@ Usage example
 Get the number of allelic imbalances associated with HRD in ovarian cancer with the function `get.ovaHRDscar`:
 ``` r
 library("ovaHRDscar")
-get.ovaHRDscars("F:/Documents/scarHRD/examples/segments.txt",reference = "grch38")
+a <-read.table("/examples/segments.txt", header=T)
+get.ovaHRDscars(a,reference = "grch38")
 ```
 
 After running it will produce the next output:
