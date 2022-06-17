@@ -33,7 +33,7 @@ preparing.input <- function(seg){
   segAUX[,7] <- seg[,6]
   colnames(segAUX)[7] <- colnames(seg)[6]
 
-  if (!(all(is.numeric(segAUX[,2])) & all(is.numeric(segAUX[,3])) & all(is.numeric(segAUX[,4])) & all(is.numeric(segAUX[,5])) & all(is.numeric(segAUX[,6])) & all(is.numeric(segAUX[,7])))){
+  if (!(all(is.numeric(segAUX[,3])) & all(is.numeric(segAUX[,4])) & all(is.numeric(segAUX[,5])) & all(is.numeric(segAUX[,6])) & all(is.numeric(segAUX[,7])))){
 	      stop("Some of the input rows do not contain numeric values in the columns: Start_position, End_position, total_cn, A_cn, B_cn")
   }
 
