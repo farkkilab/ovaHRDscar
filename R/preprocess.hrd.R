@@ -28,6 +28,11 @@ preprocess.hrd<-function(seg){
 #Preparing input
 preparing.input <- function(seg){
   segAUX <- seg
+
+  if (ncol(segAUX) != 7){
+    stop("Input must contain only the next seven columns: SampleID, Chromosome, Start_position, End_position, total_cn, A_cn, B_cn")
+  }
+
   segAUX <- cbind(segAUX, seg[,7])
   colnames(segAUX)[8] <- colnames(seg)[7]
   segAUX[,7] <- seg[,6]
@@ -38,7 +43,8 @@ preparing.input <- function(seg){
   }
 
   preprocessed_seg <- preprocess.hrd(segAUX)
-  preprocessed_seg <- rm.chr.normals(preprocessed_seg)
+  #Next line unnecessary, was used to save time of analysis, but this can lead to error in samples with 0 allelic imbalances
+  #preprocessed_seg <- rm.chr.normals(preprocessed_seg)
   length_breaks <- preprocessed_seg[,4] - preprocessed_seg[,3]
   preprocessed_seg <- preprocessed_seg[length_breaks > 50, ] #Removing variation less than 50bp
   return(preprocessed_seg)
