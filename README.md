@@ -55,8 +55,10 @@ install_github('farkkilab/ovaHRDscar')
 Citation
 --------
 
-Not yet published, coming soon.
+Please include this citation to your references if you use this tool:
 
+*Perez-Villatoro, F., Oikkonen, J., Casado, J., Chernenko, A., Gulhan, D. C., Tumiati, M., ... & Färkkilä, A. (2022). Optimized detection of homologous recombination deficiency improves the prediction of clinical outcomes in cancer. NPJ precision oncology, 6(1), 96.*
+DOI: https://doi.org/10.1038/s41698-022-00339-8
 
 Hands-on
 =================
