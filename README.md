@@ -110,8 +110,8 @@ After running it will produce the next output:
 
 
 Ruing parameters:
-- `seg` -- Input file name  
-- `reference` -- the reference genome used, `grch38` or `grch37` (default: `grch38`)  
+- `seg` -- Input dataframe with segments  
+- `chrominfo` -- the reference genome used, `grch38` or `grch37` (default: `grch38`)  
 
 References
 ==========
